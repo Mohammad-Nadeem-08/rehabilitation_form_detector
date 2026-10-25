@@ -1,0 +1,28 @@
+{
+  "exercise": "right-arm abduction",
+  "architecture": "PyTorch LSTM",
+  "sequence_length": 64,
+  "input_features": 80,
+  "class_mapping": {
+    "0": "incorrect",
+    "1": "correct"
+  },
+  "train_participants": [
+    1,
+    3,
+    4,
+    6,
+    9
+  ],
+  "validation_participants": [
+    5,
+    7
+  ],
+  "test_participants": [
+    2,
+    8
+  ],
+  "test_accuracy": 0.825,
+  "test_macro_f1": 0.819471308833011,
+  "warning": "Small dataset; held-out participant evaluation is uncertain. Not clinically validated."
+}
