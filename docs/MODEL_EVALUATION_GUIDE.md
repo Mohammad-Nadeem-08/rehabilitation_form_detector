@@ -100,7 +100,7 @@ To evaluate all three systems (Statistical-Only, LSTM-Only, Hybrid Ensemble) on 
 
 ### Via Pytest Suite:
 ```powershell
-& 'C:\Users\ELCOT\AppData\Local\Programs\Python\Python314\python.exe' -m pytest backend/tests/test_model_adapters.py -v
+python -m pytest backend/tests/test_model_adapters.py -v
 ```
 
 ### Via REST API:

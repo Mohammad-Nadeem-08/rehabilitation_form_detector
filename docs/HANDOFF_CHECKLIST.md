@@ -7,7 +7,7 @@ This document provides a concise, step-by-step integration checklist for your te
 ## 1. Quickstart & Verification Checklist
 
 - [ ] **Step 1: Clone / Locate Workspace**
-  - Project root: `c:\Users\ELCOT\Desktop\Deep leaning\project\RehabVision-AI`
+  - Project root: `RehabVision-AI/` (e.g. `git clone https://github.com/Mohammad-Nadeem-08/rehabilitation_form_detector.git`)
 - [ ] **Step 2: Python Environment Verification**
   - Python version: 3.10 to 3.14 (Verified on Python 3.14.3).
   - Install dependencies: `pip install -r requirements.txt` (FastAPI, Uvicorn, PyTorch, ReportLab, Matplotlib, Pydantic, NumPy, Pytest).
