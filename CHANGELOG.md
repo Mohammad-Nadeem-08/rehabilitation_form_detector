@@ -42,6 +42,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Backend Test Suite:**
   - Expanded total backend tests from 51 to 62 tests (100% pass rate).
 
+### Removed
+- Removed unused and duplicate Vite boilerplate files (`frontend/src/App.css`, `frontend/src/assets/hero.png`, `frontend/src/assets/react.svg`, `frontend/src/assets/vite.svg`, `frontend/README.md`, and redundant `frontend/.gitignore`).
+- Cleaned unused icon and variable imports across frontend components.
+
 ### Security
 - Enforced safe model loading restrictions, rejecting arbitrary code execution and untrusted serialization formats.
 - Updated `.gitignore` to prevent committing local databases, environment variables, and temporary scratch scripts.

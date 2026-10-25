@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   FileText, CheckCircle, Save, RefreshCw, AlertCircle, Bookmark, Star,
   ShieldCheck, UserCheck, Layers, Filter
@@ -34,11 +34,7 @@ export const ExerciseReferencePage: React.FC<ExerciseReferencePageProps> = ({
   const [isSaving, setIsSaving] = useState<boolean>(false);
   const [saveSuccessMsg, setSaveSuccessMsg] = useState<string | null>(null);
 
-  useEffect(() => {
-    loadReferences();
-  }, []);
-
-  const loadReferences = async () => {
+  const loadReferences = useCallback(async () => {
     try {
       setLoading(true);
       const list = await fetchReferences();
@@ -51,7 +47,11 @@ export const ExerciseReferencePage: React.FC<ExerciseReferencePageProps> = ({
     } finally {
       setLoading(false);
     }
-  };
+  }, [activeReferenceId, setActiveReferenceId]);
+
+  useEffect(() => {
+    loadReferences();
+  }, [loadReferences]);
 
   const handleSessionComplete = (
     trajectory: AnglePoint[],

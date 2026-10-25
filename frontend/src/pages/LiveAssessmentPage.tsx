@@ -1,14 +1,11 @@
-import React, { useState, useRef } from 'react';
-import {
-  Activity, ShieldAlert, Cpu, CheckCircle, FileText, Download,
-  TrendingUp, Award, AlertTriangle, ArrowRight
-} from 'lucide-react';
+import React, { useState } from 'react';
+import { Cpu, ArrowRight } from 'lucide-react';
 import { CameraView } from '../components/CameraView';
 import { KinematicChart } from '../components/KinematicChart';
 import { ReportModal } from '../components/ReportModal';
 import { AssessmentPanel } from '../components/AssessmentPanel';
 import { compareMovement, saveSession, fetchReference, evaluateHybridAssessment } from '../services/api';
-import { AnglePoint, CompareResult, SessionData, ReferenceData, HybridEvaluationResponse } from '../types';
+import { AnglePoint, CompareResult, SessionData, ReferenceData } from '../types';
 import { CompletedRepInfo } from '../services/repetitionTracker';
 
 interface LiveAssessmentPageProps {
@@ -100,7 +97,6 @@ export const LiveAssessmentPage: React.FC<LiveAssessmentPageProps> = ({
       if (repsToUse.length > 0) {
         // Compute stats from genuine exercise repetitions
         peakElev = Math.max(...repsToUse.map((r) => r.peakElevation));
-        const allMinElbows = repsToUse.map((r) => r.minElbow);
         const firstRepStart = repsToUse[0].completedAt - repsToUse[0].duration;
         const lastRepEnd = repsToUse[repsToUse.length - 1].completedAt;
 

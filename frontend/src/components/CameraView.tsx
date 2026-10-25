@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import {
   Camera, CameraOff, Play, Pause, Square, RefreshCw,
-  AlertCircle, CheckCircle, ShieldAlert, Activity, Info
+  AlertCircle, CheckCircle, ShieldAlert, Info
 } from 'lucide-react';
 import {
   getPoseLandmarker, extractRightArmMetrics, drawPoseSkeleton,
